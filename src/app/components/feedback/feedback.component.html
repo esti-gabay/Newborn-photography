@@ -1,0 +1,42 @@
+
+<div class="content">
+
+<div class="inline" style="display: inline-flex;">
+<div style="margin-right: 50px;">
+<button class="add" (click)="addFeedback()">הוספת תגובה</button>
+<br>
+<br>
+<a href=""  class="text-muted" style="text-decoration: none; margin-left: 250px;"> << לתגובות גלול למטה</a>
+</div>
+<div >
+<img src="assets\images\background\customer2.jpg" width="100%" style="margin-bottom:80px ;margin-right: 50px;">
+</div>
+</div>
+
+
+<br>
+<div id="feedback" style="direction: rtl; width: 70%;margin-left: 450px;">
+<ul>
+<ngb-accordion #acc="ngbAccordion" activeIds="config-panel-one" *ngFor="let item of arrFeedBack ">
+<ngb-panel title="{{item.name | myPipe}}" id="config-panel-one">
+<ng-template ngbPanelContent >
+<p>
+{{item.feedBack}} <br>
+{{item.date|date}}
+</p>
+<h5>{{item.name}} מ{{item.city}}</h5>
+<button (click)="addLike(item)"  [ngStyle]="{'background-color':item.numberLike===0?'#f2beb8':'white'}" >
+<div *ngIf="item.numberLike==0;else showCount">
+<i class="bi bi-hand-thumbs-up-fill"></i>
+</div>
+<ng-template #showCount>
+<i class="bi bi-hand-thumbs-up-fill"></i>{{item.numberLike}}
+</ng-template>
+</button>
+</ng-template>
+</ngb-panel>
+</ngb-accordion> 
+</ul>
+</div>
+</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">

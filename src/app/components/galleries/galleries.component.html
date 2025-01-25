@@ -1,0 +1,17 @@
+
+<img class="card-img-top" src="assets\images\background\gallery.jpg" alt="Card image cap">
+<div class="card-deck" >
+<div class="card" *ngFor="let item of arrGalleries ">
+<a href="" routerLink="{{item.Category}}">
+<img class="card-img-top" (click)="moreDetails(item.Category)" src="{{item.Image}}" alt="Card image cap">
+</a>
+
+<div class="card-body">
+<h5 class="card-title">{{item.Category}}</h5>
+<p class="card-text">{{item.Description}}</p>
+<a href="" routerLink="{{item.Category}}" class="text-muted" style="margin-left: 220px; text-decoration: none;" (click)="moreDetails(item.Category)" > << לצפייה בתמונות</a>
+
+</div>
+</div>
+
+<router-outlet></router-outlet>

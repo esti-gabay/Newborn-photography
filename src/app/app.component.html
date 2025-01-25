@@ -1,0 +1,38 @@
+
+<router-outlet></router-outlet>
+<nav  
+class="navbar navbar-expand-lg head sticky-top" dir="rtl" style="background-color: #f2beb8;" >
+<div class="collapse navbar-collapse " style="background-color: #f2beb8;"  style="text-align: center;">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item" routerLink="" routerLinkActive="active">
+<a class="nav-link"  style="padding-right: 20px;"> דף הבית </a>
+</li>
+<li class="nav-item" routerLinkActive="active">
+<a class="nav-link" routerLink="/contact"  style="padding-right: 20px;">צור קשר</a>
+</li>
+<li class="nav-item"  routerLinkActive="active">
+<a class="nav-link" routerLink="/gallery"  style="padding-right: 20px;">גלריה</a>
+</li>
+<li class="nav-item"  routerLinkActive="active">
+<a class="nav-link" routerLink="/feedback" style="padding-right: 20px;">תגובות</a>
+</li>
+<li class="nav-item"   >
+<!--  -->
+<a class="nav-link"  routerLink="/feedback" style="padding-right: 500px;">{{gift}}</a>
+
+</li>
+</ul>
+</div> 
+</nav>
+
+<router-outlet></router-outlet>
+<footer class="bg-light text-lg-start">
+<!-- Copyright -->
+<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+© 2022 Copyright:
+<a class="text-dark" href="">Ortal & Esti & Ayala</a>
+</div>
+<!-- Copyright -->
+</footer>
+
+
